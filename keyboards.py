@@ -1,6 +1,6 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, KeyboardButton
 
-start_keyboard = [[KeyboardButton(text='Share Contact', request_contact=True)]]
+start_keyboard = [[KeyboardButton(text='Нажми на меня', request_contact=True)]]
 
 main_menu_keyboard = InlineKeyboardMarkup(inline_keyboard=[
     [
@@ -25,7 +25,10 @@ vacancy = InlineKeyboardMarkup(inline_keyboard=[
     ]
 ])
 
-back_from_vacancy = InlineKeyboardMarkup(inline_keyboard=[
+in_vacancy = InlineKeyboardMarkup(inline_keyboard=[
+    [
+        InlineKeyboardButton(text='Откликнуться', callback_data='respond_barista')
+    ],
     [
         InlineKeyboardButton(text='Назад', callback_data='back_from_vacancy')
     ]
