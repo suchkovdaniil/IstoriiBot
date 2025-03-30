@@ -9,6 +9,7 @@ from buttons.start import *
 from buttons.feedback import *
 from buttons.events import *
 from buttons.vacancy import *
+from buttons.cooperation import *
 
 
 async def main():

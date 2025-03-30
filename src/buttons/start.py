@@ -4,7 +4,7 @@ from config_reader import dp
 from aiogram import F
 from aiogram import types
 from aiogram.filters.command import Command
-from aiogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove
+from aiogram.types import ReplyKeyboardMarkup, ReplyKeyboardRemove, Message
 
 from text import greeting, success_get_contact, repeat_get_contact, menu_text
 from keyboards import start_keyboard, main_menu_keyboard
