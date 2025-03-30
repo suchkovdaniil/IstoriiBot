@@ -17,3 +17,8 @@ async def contacts(msg: types.Message):
 async def menu_func(callback: CallbackQuery):
     await bot.delete_message(chat_id=callback.from_user.id, message_id=callback.message.message_id)
     await callback.message.answer_photo(FSInputFile('pictures/меню_истории.jpeg'), reply_markup=back_to_menu)
+
+
+@dp.callback_query(F.data == 'back')
+async def bck(callback: CallbackQuery):
+    await callback.message.answer(f"Выбери, что тебя интересует:", reply_markup=main_menu_keyboard)
